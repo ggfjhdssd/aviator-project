@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <nav class="navbar">
+            <div class="logo">✈️ Aviator</div>
+            <div class="user-info">
+                <span id="username"></span>
+                <span class="balance">Balance: $<span id="balance">0</span></span>
+                <button id="logoutBtn" class="btn-logout">Logout</button>
+            </div>
+        </nav>
+        
+        <div class="game-area">
+            <div class="multiplier-container">
+                <div id="multiplier" class="multiplier">1.00x</div>
+                <div id="gameStatus" class="game-status">Waiting for next round...</div>
+            </div>
+            
+            <div class="betting-area">
+                <div class="bet-controls">
+                    <input type="number" id="betAmount" class="bet-input" value="10" min="1">
+                    <button id="placeBetBtn" class="btn-bet">Place Bet</button>
+                    <button id="cashoutBtn" class="btn-cashout" disabled>Cash Out</button>
+                </div>
+                
+                <div class="bet-info">
+                    <div>Auto Cashout: <input type="number" id="autoCashout" value="2.0" step="0.1" min="1.1"></div>
+                </div>
+            </div>
+            
+            <div class="previous-rounds">
+                <h3>Previous Rounds</h3>
+                <div id="previousMultipliers" class="multipliers-list"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
